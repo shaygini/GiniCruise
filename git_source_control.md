@@ -1,4 +1,4 @@
-id: app-development-git-and-source-control
+id: app-development-gini-git-and-source-control
 summary: sum all app example
 authors: Shay markovich
 
