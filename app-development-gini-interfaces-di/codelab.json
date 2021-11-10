@@ -1,0 +1,18 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2021-11-10T08:27:21Z",
+  "id": "app-development-gini-interfaces-di",
+  "duration": 0,
+  "title": "Interfaces and di",
+  "authors": "Shay markovich",
+  "summary": "interfaces and di",
+  "source": "interfaces_di.md",
+  "theme": "",
+  "status": null,
+  "category": null,
+  "tags": [],
+  "url": "app-development-gini-interfaces-di"
+}

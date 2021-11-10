@@ -1,0 +1,227 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>App develovment in android studio and using gradle</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="app-development-gini-gradle"
+                  title="App develovment in android studio and using gradle"
+                  environment="web"
+                  feedback-link="">
+    
+      <google-codelab-step label="General" duration="0">
+        <p>In this codelab you will learn about app stracture, how build process is done, and how android studio use gradle to build the files</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Creating new app" duration="0">
+        <h2 is-upgraded>Using android studio</h2>
+<p>in android studio press file - &gt; create new App<br>fill in app name, package name, location, language - Kotlin, and Minimum SDK, and press finish</p>
+<h2 is-upgraded>Examin the app</h2>
+<p>android studio created an app files lets look at the file stracture</p>
+<p><em>TIP:</em>  to see hiden in finder files press Command + Shift + ‘.&#39;</p>
+<p><strong>hidden files:</strong>.gitignore - file - this is the of the git source control - it says which files to ignore and not insert into the git, it usaly has the build folder, .idea folder and some other files, you can also see it inside the app folder where it has the build foler</p>
+<p>.gradle - directory - this folder contails files gradle hidden files - using for gradle internal use</p>
+<p>.idea - directory - this folder contails files of the idea (android studio) it has configurations and other definitions about the project</p>
+<p><em>TIP:</em>  after download new project if the project donesn&#39;t complile you can try to delete the .idea folder and build folder and rebuild, this will create the project from start and can solve mismatch prolbems</p>
+<p><strong>about gradle</strong><br>gradle help us to build our app and manage dependencies<br><br><code>![depenency diagram](https://docs.gradle.org/current/userguide/img/dependency-management-resolution.png)<br></code></p>
+<p><strong>gradle files:</strong><br>/open each file and look at the content check what each files does/</p>
+<ul>
+<li>settins.gradle - in the main gradle project, contain all the gradle sub project (app module and libraries module)<br><br><code>include &#39;:app&#39;<br></code></li>
+<li>gradle.properties</li>
+<li>build.gradle (project)<br><br><ul>
+<li>this are used during the build time - if you want to add plugin to the app add repositories to here buildscript</li>
+</ul>
+</li>
+</ul>
+<p>in each sub project (module) has its own build.gradle file</p>
+<ul>
+<li>build.gradle<br><br><ul>
+<li>dependenties</li>
+</ul>
+</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="build.gradle" duration="0">
+        <p>The app build.gradle include</p>
+<pre><code>plugins {
+    id &#39;com.android.application&#39;
+    id &#39;kotlin-android&#39;
+}
+</code></pre>
+<p>This custom plugins adds read the build gradle files and add task in order</p>
+<p>id ‘com.android.application&#39; - add ability to compile the app into apk file</p>
+<p>android:</p>
+<pre><code>android {
+    
+    defaultConfig {
+    }
+
+    buildTypes {
+    }
+
+    compileOptions {
+    }
+
+    kotlinOptions {
+    }
+
+    buildFeatures {
+    }
+
+
+}
+</code></pre>
+<p>this is the android tag it used to tell the android plugin how to build the code<br>it contsins defult config like</p>
+<ul>
+<li>compile ask, min sdk version code, version name, application id</li>
+<li>build types - release / debug</li>
+<li>flavours</li>
+<li>more option like compile option kotlin option build features</li>
+</ul>
+<h2 is-upgraded>dependencies:</h2>
+<pre><code>dependencies {
+    implementation &#39;&#39;
+    implementation &#39;androidx.appcompat:appcompat:1.3.1&#39;
+    implementation &#39;com.google.android.material:material:1.4.0&#39;
+    implementation &#39;androidx.constraintlayout:constraintlayout:2.1.1&#39;
+    implementation &#39;androidx.navigation:navigation-fragment-ktx:2.3.5&#39;
+    implementation &#39;androidx.navigation:navigation-ui-ktx:2.3.5&#39;
+    testImplementation &#39;junit:junit:4.+&#39;
+    androidTestImplementation &#39;androidx.test.ext:junit:1.1.3&#39;
+    androidTestImplementation &#39;androidx.test.espresso:espresso-core:3.4.0&#39;
+}
+</code></pre>
+<p>add local jar file</p>
+<pre><code>dependencies {
+    ...
+    implementation files(&#39;libs/something_local.jar&#39;)
+}
+</code></pre>
+<p>dependencty stracture:</p>
+<ul>
+<li>androidx.core <strong>:</strong> core-ktx <strong>:</strong> 1.7.0<br>– androidx.core - artifect group name<br>–  core-ktx - artifect name<br>– 1.7.0 - artifect version</li>
+</ul>
+<p><em>TIP:</em>  never use + in the version name - when change dependency version name always check that the app still behave as it should !!</p>
+<p>using local sub project (module):</p>
+<pre><code>dependencies {
+    ...
+    
+    implementation project(&#39;&#39;)
+
+    implementation (project(&#39;&#39;)) {
+        exlude ......
+    }
+
+}
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="libraries" duration="0">
+        <p>android library is gradle sub project with the ‘com.android.library&#39; plugin (instead of the ‘com.android.application&#39; plugin)<br>its artifect is aar files,<br>it can be used by the app module directrly by adding project implementation:</p>
+<pre><code>dependencies {
+    ...
+    
+    implementation project(&#39;&#39;)
+
+}
+</code></pre>
+<h2 is-upgraded>manualy</h2>
+<h2 is-upgraded>automaticly</h2>
+<p>in android studio</p>
+<ul>
+<li>file -&gt; new -&gt; New Module ...</li>
+<li>Choose android library</li>
+<li>press finish</li>
+</ul>
+<h2 is-upgraded>publish library</h2>
+<p>you can publish the libraries by using the <strong>‘maven-publish&#39;</strong> plugin:</p>
+<pre><code>// Because the components are created only during the afterEvaluate phase, you must
+// configure your publications using the afterEvaluate() lifecycle method.
+afterEvaluate {
+    publishing {
+        publications {
+            // Creates a Maven publication called &#34;release&#34;.
+            release(MavenPublication) {
+                // Applies the component for the release build variant.
+                from components.release
+
+                // You can then customize attributes of the publication as shown below.
+                groupId = &#39;com.example.MyLibrary&#39;
+                artifactId = &#39;final&#39;
+                version = &#39;1.0&#39;
+            }
+            // Creates a Maven publication called &#34;debug&#34;.
+            debug(MavenPublication) {
+                // Applies the component for the debug build variant.
+                from components.debug
+
+                groupId = &#39;com.example.MyLibrary&#39;
+                artifactId = &#39;final-debug&#39;
+                version = &#39;1.0&#39;
+            }
+        }
+    }
+</code></pre>
+<p>After you create publications, the Maven Publish plugin creates publishing tasks that you can use to publish your artifact to the repositories that you specify.</p>
+<pre><code>./gradlew clean build publish
+</code></pre>
+<p><em>TIP:</em>  you can publish the library to &#34;maven local repository&#34; - this is repository inside your computer in ~/.m2/repository and you can use it if you add the repository MavenLocal()</p>
+<pre><code>./gradlew clean build publishToMavenLocal
+</code></pre>
+<h2 is-upgraded>library api vs implemenataion vs compile only</h2>
+<p>api - the dependencis is visible to the consumer of the library<br>implemenation - the dependencis is not visible to the consumer of the library<br>compile only - the dependencis is visible to the consumer of the library and also is not added in the pom file, so the consumer need to add them indendetly</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Using proguard" duration="0">
+        <p>progurd is a tool for we use it to obsfectd(hide implementation deatils) and minify (reduce code size) of our code</p>
+<pre><code> buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile(&#39;proguard-android-optimize.txt&#39;), &#39;proguard-rules.pro&#39;
+        }
+    }
+</code></pre>
+<p>we use it to obsfectd(hide implementation deatils) and minify (reduce code size) of our code<br>it will go over the code and throw code that is not in use<br>it will go over the code and change functions name for obsferction</p>
+<h2 is-upgraded>using progurd inside a library</h2>
+<p>consumerProguardFiles - the rules that are used when the code is consumed as a sub module in the project (app modulde that use library module in the same project)</p>
+<p>proguardFiles - the rules that are used when compile the library - the compiled aar file is upload to the reposity</p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+
+</body>
+</html>

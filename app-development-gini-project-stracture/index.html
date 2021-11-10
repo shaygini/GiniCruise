@@ -1,0 +1,108 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>What is the project stracture</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="app-development-gini-project-stracture"
+                  title="What is the project stracture"
+                  environment="web"
+                  feedback-link="">
+    
+      <google-codelab-step label="General" duration="0">
+        <p>In this codelab you will learn about the project stracture, how to put the source classes inside the app</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Java Project stracture" duration="0">
+        <h2 is-upgraded>packages</h2>
+<p>packages are used to organize the code and as a privacy method</p>
+<h2 is-upgraded>accessibilty</h2>
+<ul>
+<li>default private - within a package</li>
+<li>private</li>
+<li>public</li>
+<li>protected</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="android project stracture" duration="0">
+        <p>project stracture tree -</p>
+<p>di -<br>data -<br><br>network -</p>
+<pre><code>Retorofit
+ApiService
+</code></pre>
+<p>ui -</p>
+<pre><code>viewModels -
+    FeatureOneViewModel
+    FeatureTwoViewModel
+adapters -
+    FeatureOneAdapter
+    FeatureTwoAdapter
+fragment- 
+    FeatureOneFragment
+    FeatureTwoFragment
+customView -
+    FeatureOneCustomView
+    FeatureTwoCustomView
+</code></pre>
+<p>project stracture features<br>di -<br>data -</p>
+<pre><code>roomDatabase
+roomDao
+</code></pre>
+<p>ui -<br>  FeatureOne</p>
+<pre><code>- FeatureOneViewModel
+- FeatureOneAdapter
+- FeatureOneFragment
+- FeatureOneCustomView
+</code></pre>
+<p>FeatureTwo</p>
+<pre><code>- FeatureTwoViewModel
+- FeatureTwoAdapter
+- FeatureTwoFragment
+- FeatureTwoCustomView
+</code></pre>
+<p>** you will see both ways it should be determain in the begining, please don&#39;t mix the two **</p>
+<h2 is-upgraded>di</h2>
+<p>here you put all the dependency injection code<br>this code is responsible to initiate and supply the code for all the app<br>(there should not have new in the code)<br>you can use it manualy or with dependncy injection library like dagger / hilt / koin</p>
+<h2 is-upgraded>data</h2>
+<p>here you will put all the data manipulation of the coded<br>and persistens data<br>data base<br>repository<br>persistense<br>use room data base for database</p>
+<h2 is-upgraded>network</h2>
+<p>here you will put all the network related code<br>all models from the server<br>all function calls<br>we usaly use newtwork library like Retrofit - to help us get response from the server and return them</p>
+<h2 is-upgraded>ui</h2>
+<p>here you will put all the ui<br>view models<br>addapter<br>views<br>fragment<br>activities</p>
+<p>each layer should have it&#39;s own models - don&#39;t mix them<br>(models for newtork server / models for data layer room server(ententies) / models for use inside the app (domain) / models inside the ui layer)</p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+
+</body>
+</html>

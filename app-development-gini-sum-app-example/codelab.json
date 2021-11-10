@@ -1,0 +1,18 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2021-11-10T08:27:47Z",
+  "id": "app-development-gini-sum-app-example",
+  "duration": 0,
+  "title": "Sum all app example",
+  "authors": "Shay markovich",
+  "summary": "sum all app example",
+  "source": "navigation_sum_all_sample_app.md",
+  "theme": "",
+  "status": null,
+  "category": null,
+  "tags": [],
+  "url": "app-development-gini-sum-app-example"
+}

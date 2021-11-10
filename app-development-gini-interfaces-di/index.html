@@ -1,0 +1,76 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Interfaces and di</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="app-development-gini-interfaces-di"
+                  title="Interfaces and di"
+                  environment="web"
+                  feedback-link="">
+    
+      <google-codelab-step label="General" duration="0">
+        <p>In this codelab you will learn about interfaces and DI</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Interfaces" duration="0">
+        <h2 is-upgraded>What it used for</h2>
+<p>Interfaces are used for:</p>
+<ul>
+<li>Seperate of consern</li>
+<li>The consumer class only knows about the function that are in the interfance and don&#39;t care about other function or implemtation details</li>
+<li>Allow changing the implementation of the function, this can be in for test fakes or other implementations</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="DI - dependency injection" duration="0">
+        <p>Dependency injection are used for</p>
+<h2 is-upgraded>What are they use for</h2>
+<h2 is-upgraded>Manual</h2>
+<h2 is-upgraded>Service locator</h2>
+<h2 is-upgraded>Dagger</h2>
+<p>A google di framework that helps inject dependentis<br>in android we can use Android</p>
+<p>it has component, Module<br><strong>please look at:</strong><a href="https://developer.android.com/training/dependency-injection/dagger-android" target="_blank">Using Dagger in Android apps</a></p>
+<h2 is-upgraded>Hilt</h2>
+<p>Hilt is a di framework base on Dagger but already have all the componnents needed for android</p>
+<p><strong>please look at:</strong><a href="https://developer.android.com/training/dependency-injection/hilt-android" target="_blank">Dependency injection with Hilt</a></p>
+<h2 is-upgraded>Koin</h2>
+<p>Koin is a di framework in kotlin</p>
+<p>It have Modules that contains single, factory</p>
+<p>We get the dependency by using the &#34;by inject()&#34; delagate function</p>
+<p><strong>please look at:</strong><a href="https://insert-koin.io/docs/quickstart/android" target="_blank">Koin in android</a></p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+
+</body>
+</html>

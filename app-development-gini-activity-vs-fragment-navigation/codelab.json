@@ -1,0 +1,18 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2021-11-10T08:27:34Z",
+  "id": "app-development-gini-activity-vs-fragment-navigation",
+  "duration": 0,
+  "title": "Activity vs fragment and navigations",
+  "authors": "Shay markovich",
+  "summary": "activity vs fragment and navigation",
+  "source": "navigation_activities_frgament.md",
+  "theme": "",
+  "status": null,
+  "category": null,
+  "tags": [],
+  "url": "app-development-gini-activity-vs-fragment-navigation"
+}

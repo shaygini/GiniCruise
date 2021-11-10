@@ -1,0 +1,18 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2021-11-10T08:26:52Z",
+  "id": "app-development-gini-callbacks-livedata-corutines-flow",
+  "duration": 0,
+  "title": "callbacks livedata corutines flow",
+  "authors": "Shay markovich",
+  "summary": "callbacks livedata corutines flow",
+  "source": "callback_livedata_corutines_flow.md",
+  "theme": "",
+  "status": null,
+  "category": null,
+  "tags": [],
+  "url": "app-development-gini-callbacks-livedata-corutines-flow"
+}

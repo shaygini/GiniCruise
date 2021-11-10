@@ -1,0 +1,18 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2021-11-06T07:43:46Z",
+  "id": "gini-demo",
+  "duration": 1,
+  "title": "Here the main title of the codelab test",
+  "authors": "Your name",
+  "summary": "The codelab description ssfsa",
+  "source": "main.md",
+  "theme": "",
+  "status": null,
+  "category": null,
+  "tags": [],
+  "url": "gini-demo"
+}

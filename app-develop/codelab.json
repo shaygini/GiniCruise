@@ -1,0 +1,18 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2021-11-06T08:35:29Z",
+  "id": "app-develop",
+  "duration": 0,
+  "title": "How to develop app in gini apps dsfds",
+  "authors": "Shay markovich",
+  "summary": "How to develop an app",
+  "source": "app-develop.md",
+  "theme": "",
+  "status": null,
+  "category": null,
+  "tags": [],
+  "url": "app-develop"
+}

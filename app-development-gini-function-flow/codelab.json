@@ -1,0 +1,18 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2021-11-10T08:27:11Z",
+  "id": "app-development-gini-function-flow",
+  "duration": 0,
+  "title": "Function-flow",
+  "authors": "Shay markovich",
+  "summary": "function-flow",
+  "source": "funtion_flow_and_calls.md",
+  "theme": "",
+  "status": null,
+  "category": null,
+  "tags": [],
+  "url": "app-development-gini-function-flow"
+}

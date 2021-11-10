@@ -1,0 +1,18 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2021-11-08T07:13:55Z",
+  "id": "id-of-the-codelab",
+  "duration": 1,
+  "title": "Cruse for Gini new commers",
+  "authors": "Your name",
+  "summary": "The codelab description",
+  "source": "main.md",
+  "theme": "",
+  "status": null,
+  "category": null,
+  "tags": [],
+  "url": "id-of-the-codelab"
+}

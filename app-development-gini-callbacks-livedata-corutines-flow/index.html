@@ -1,0 +1,98 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>callbacks livedata corutines flow</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="app-development-gini-callbacks-livedata-corutines-flow"
+                  title="callbacks livedata corutines flow"
+                  environment="web"
+                  feedback-link="">
+    
+      <google-codelab-step label="General" duration="0">
+        <p>In this codelab you will learn about several ways we use to call functions</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Callbacks" duration="0">
+        <h2 is-upgraded>What it used for</h2>
+<p>This is used for pass code that will be executed in feauter time.</p>
+<h2 is-upgraded>How its done</h2>
+<ul>
+<li>defning and interface</li>
+<li>implement the interface and pass the object that implement the interface so that the fuction can be called in feauter time</li>
+<li>in kotlin - you can also pass a lambda - passing the function itself</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="LiveData" duration="0">
+        <h2 is-upgraded>What it used for</h2>
+<p>This is used to pass data to ui componnents</p>
+<h2 is-upgraded>How its done</h2>
+<ul>
+<li>pass the data just in time for the ui owner (when the lifecicle owner is in at least resume state)</li>
+<li>pass the data in the main ui thread</li>
+<li>auto unObserbe when the lifecycleOwner is destroyed</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Flow" duration="0">
+        <h2 is-upgraded>What it used for</h2>
+<p>This is used to pass data to in all application</p>
+<p>can be canceld using the coutotines cancel machenizem</p>
+<ul>
+<li>flow</li>
+<li>shared flow</li>
+<li>state flow</li>
+</ul>
+<p>based on kotlin courotiens, not supported in java</p>
+<h2 is-upgraded>How its done</h2>
+<p>-</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="event bus" duration="0">
+        <h2 is-upgraded>What it used for</h2>
+<p>publish events thorout the application</p>
+<h2 is-upgraded>How its done</h2>
+<ul>
+<li>use a publish subscribre model for events</li>
+</ul>
+<p><a href="https://guides.codepath.com/android/communicating-with-an-event-bus" target="_blank">communicating with an event bus</a></p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+
+</body>
+</html>
