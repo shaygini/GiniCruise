@@ -64,3 +64,7 @@ publish events thorout the application
 [communicating with an event bus](https://guides.codepath.com/android/communicating-with-an-event-bus)
 
 
+<!-- ------------------------ -->
+## Return to main
+[return to main](../)
+

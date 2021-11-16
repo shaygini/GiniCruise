@@ -26,3 +26,7 @@ In this codelab you will learn about common libraries we used in our projects
 
 <!-- ------------------------ -->
 ## More
+
+<!-- ------------------------ -->
+## Return to main
+[return to main](../)

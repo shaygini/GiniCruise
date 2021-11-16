@@ -4,15 +4,15 @@
   "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
   "updated": "2021-11-10T12:39:19Z",
-  "id": "app-development-gini-project-stracture",
+  "id": "app-development-gini-network",
   "duration": 0,
-  "title": "What is the project stracture",
+  "title": "Network",
   "authors": "Shay markovich",
-  "summary": "project stracture",
-  "source": "android_project_stracture.md",
+  "summary": "network",
+  "source": "network.md",
   "theme": "",
   "status": null,
   "category": null,
   "tags": [],
-  "url": "app-development-gini-project-stracture"
+  "url": "app-development-gini-network"
 }

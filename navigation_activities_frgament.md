@@ -19,3 +19,7 @@ A fragment represents a modular portion of the user interface within an activity
 <!-- ------------------------ -->
 ## Navigation and navigation components
 [navigation overview](https://developer.android.com/guide/navigation)
+
+<!-- ------------------------ -->
+## Return to main
+[return to main](../)

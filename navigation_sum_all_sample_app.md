@@ -19,30 +19,33 @@ In this section you will build app with all the thing you learn so far
 The app allow us to see spacex lanches details
 
 
-should use:
-navigation components
-
-newtwork calls with server
-room database
+stack:
+navigation components - navigation between fragment
+newtwork calls retrofit - calls to the api
+room database - save data in room database
 view model
 fragment
-actiivty
+single activity
+live data - pass data to the ui - from the view model to the fragment
+flow - pass data betweens layers
 
 screens:
-1. list of last lanches
+1. "last lanches" list
 2. launch details
-2. list of all ships
+2. "all ships" list
 3. ships detail
 
 drawer menu with
 1. latest lanches
 2. ships
 
+refresh to reload
 
 use https://github.com/r-spacex/SpaceX-API
 
-save ships in database
-save lanches in database
-
 add tests look at
 [tarining testing](https://developer.android.com/codelabs/advanced-android-kotlin-training-testing-basics#0)
+
+<!-- ------------------------ -->
+## Return to main
+[return to main](../)
