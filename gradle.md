@@ -275,7 +275,7 @@ you can plublish directly to jforg repository and use the Jfrog plugin to publis
 
 <!-- ------------------------ -->
 ## Using proguard
-progurd is a tool for we use it to obsfectd(hide implementation deatils) and minify (reduce code size) of our code
+progurd is a tool for us use to obsfectd(hide implementation deatils) and minify (reduce code size) of our code
 
 
 ```
