@@ -35,18 +35,18 @@
     
       <google-codelab-step label="Creating new app" duration="0">
         <h2 is-upgraded>Using android studio</h2>
-<p>In android studio press file - &gt; create new App<br>fill in app name, package name, location, language - Kotlin, and Minimum SDK, and press finish</p>
+<p>In android studio press file - &gt; create new App<br>Fill in app name, package name, location, language - Kotlin, and Minimum SDK, and press finish</p>
 <h2 is-upgraded>Examin the app</h2>
 <p>android studio created an app files lets look at the file stracture</p>
 <p><em>TIP:</em>  to see hiden in finder files press Command + Shift + ‘.&#39;</p>
 <p><strong>hidden files:</strong></p>
-<p><code>.gitignore</code> - file - this is the of the git source control - it says which files to ignore and not insert into the git, it usaly has the build folder, .idea folder and some other files, you can also see it inside the app folder where it has the build foler</p>
-<p><code>.gradle/</code> - directory - this folder contails files gradle hidden files - using for gradle internal use</p>
-<p><code>.idea/</code> - directory - this folder contails files of the idea (android studio) it has configurations and other definitions about the project</p>
-<p><em>TIP:</em>  after download new project if the project donesn&#39;t complile you can try to delete the .idea folder and build folder and rebuild, this will create the project from start and can solve the prolbems, also you can use <code>Invalidate Cashes \  Reset ...</code></p>
+<p><code>.gitignore</code> - file - This is the of the git source control - it says which files to ignore and not insert into the git, it usaly has the build folder, .idea folder and some other files, you can also see it inside the app folder where it has the build foler</p>
+<p><code>.gradle/</code> - directory - This folder contails files gradle hidden files - using for gradle internal use</p>
+<p><code>.idea/</code> - directory - This folder contails files of the idea (android studio) it has configurations and other definitions about the project</p>
+<p><em>TIP:</em>  After download new project if the project donesn&#39;t complile you can try to delete the .idea folder and build folder and rebuild, this will recreate the project from start and can solve the prolbems, you can also use <code>Invalidate Cashes \  Reset ...</code></p>
 <p><strong>About gradle</strong><br>Gradle help us to <strong>build</strong> our app and <strong>manage dependencies</strong></p>
 <p><strong>gradle files:</strong></p>
-<p>open each file and look at the content check what each files does</p>
+<p>Open each file and look at the content check what each files does</p>
 <ul>
 <li>settings.gradle - the main gradle project, contain all the gradle sub project (app module and libraries module)<pre><code>include &#39;:app&#39;
 </code></pre>
@@ -54,7 +54,7 @@
 <li>gradle.properties</li>
 <li>build.gradle (project)<ul>
 <li>buildscript - this are used during the build time - if you want to add plugin to the app add repositories to and claspath here under buildscript object</li>
-<li>allProject - use this to definition for all the subProjects</li>
+<li>allProject - use this to definition for all subProjects</li>
 </ul>
 </li>
 </ul>
@@ -95,20 +95,20 @@
 
 }
 </code></pre>
-<p>this is the android tag it used to tell the android plugin how to build the code<br>it contains</p>
+<p>This is the android tag it used to tell the android plugin how to build the code<br>it contains</p>
 <ul>
 <li>defult config like - compile ask, min sdk version code, version name, application id</li>
 <li>build types - release / debug</li>
 <li>flavours</li>
-<li>more option like compile option kotlin option build features</li>
+<li>more option like compile option, kotlin option, build features</li>
 </ul>
-<h2 is-upgraded>dependencies:</h2>
-<p><a href="https://docs.gradle.org/current/userguide/img/dependency-management-resolution.png" target="_blank">depenency diagram</a></p>
-<p>Dependincies:<br>We can add dependntis several types:</p>
+<h2 is-upgraded>Dependencies:</h2>
+<p><a href="https://docs.gradle.org/current/userguide/img/dependency-management-resolution.png" target="_blank">dependency diagram</a></p>
+<p>Dependencies:<br>We can add dependencies of several types:</p>
 <ul>
 <li>From repository</li>
 <li>SubProject</li>
-<li>Jars or Aar included in the project</li>
+<li>jars or aar included in the project</li>
 </ul>
 <h3 is-upgraded>Add file from repository:</h3>
 <pre><code>dependencies {
@@ -124,20 +124,20 @@
 }
 </code></pre>
 <p>dependencty from repository has the fallowing strature:</p>
-<p>artifectGroup:artifectName:Version</p>
+<p>artifectGroup:artifectName:version</p>
 <ul>
 <li>androidx.core <strong>:</strong> core-ktx <strong>:</strong> 1.7.0<br>– androidx.core - artifect group name<br>–  core-ktx - artifect name<br>– 1.7.0 - artifect version</li>
 </ul>
-<p><em>TIP:</em>  never use + in the version name - when change dependency version name always check that the app still behave as it should !!</p>
+<p><em>TIP:</em>  don&#39;t use ‘+&#39; in the version name - when change dependency version name always check that the app still behaving as it should !!</p>
 <h3 is-upgraded>Add file from subProject (module)</h3>
 <pre><code>dependencies {
     ...
     
     implementation project(&#39;**:ProjectName**&#39;)
 
-    // or if you want to exlude some libraries
+    // Or if you want to exclude some libraries
     implementation (project(&#39;&#39;)) {
-        exlude ......
+        exclude ......
     }
 
 }
@@ -154,7 +154,7 @@
 
     dependencies {
         ...
-        // adding xxx.aar file that is inside the app/libs folder
+        // Adding xxx.aar file that is inside the app/libs folder
         implementation (name:&#39;xxx&#39;, ext:&#39;aar&#39;)
     }
 }
@@ -164,33 +164,33 @@
       </google-codelab-step>
     
       <google-codelab-step label="Libraries" duration="0">
-        <h2 is-upgraded>libraries as sub project</h2>
+        <h2 is-upgraded>Libraries as sub project</h2>
 <p>To create a library we will add gradle subProject with the <strong>‘com.android.library&#39;</strong> plugin (instead of the <strong>‘com.android.application&#39;</strong> plugin)<br>its artifect is an aar files,</p>
 <p>It can be used by the app module by adding the subProject to the depedencies implementation:</p>
-<h3 is-upgraded>create new module:</h3>
-<p>in android studio</p>
+<h3 is-upgraded>Create new module:</h3>
+<p>In android studio:</p>
 <ul>
-<li>file -&gt; new -&gt; New Module ...</li>
+<li>File -&gt; New -&gt; New Module ...</li>
 <li>Choose android library</li>
-<li>press finish</li>
+<li>Press finish</li>
 </ul>
 <h2 is-upgraded>libraries to be used by other project</h2>
 <p>Somtimes we want to create libraries to be used by other project</p>
 <p>In this senario we will publish the library and create artifect aar file that we will used by the  consumer, or publish the artifect directrly to remote repository like jfrog</p>
 <h3 is-upgraded>Library dependncies - api vs implemenataion vs compile only</h3>
 <ul>
-<li>api - the dependencis is visible to the consumer of the library</li>
-<li>implemenation - the dependencis is not visible to the consumer of the library</li>
-<li>compile only - the dependencis is visible to the consumer of the library and also is not added in the pom file, so the consumer need to add them indendetly</li>
+<li><code>api</code> - the dependencis is visible to the consumer of the library</li>
+<li><code>implemenation</code> - the dependencis is not visible to the consumer of the library</li>
+<li><code>compileOnly</code> - the dependencis is visible to the consumer of the library and also is not added in the pom file, so the consumer need to add them indendetly</li>
 </ul>
 <h3 is-upgraded>When develop library for external project</h3>
 <ul>
 <li>Try to avoid using dependenis as posible</li>
-<li>Make the lintsty size small as posible</li>
-<li>When using progurd make sure the expose the neccery classes (see <a href="./#4" target="_blank">using progurd</a> for more details)</li>
+<li>Make the library size small as posible</li>
+<li>When using progurd make sure the expose the necessary classes (see <a href="./#4" target="_blank">using progurd</a> for more details)</li>
 </ul>
-<h3 is-upgraded>publish library</h3>
-<p>using the <strong>‘maven-publish&#39;</strong> plugin:</p>
+<h3 is-upgraded>Publish library</h3>
+<p>Using the <strong>‘maven-publish&#39;</strong> plugin:</p>
 <p>Add ‘maven-publish&#39; plugin</p>
 <pre><code>plugins {
     id &#39;maven-publish&#39;
@@ -224,19 +224,19 @@ afterEvaluate {
         }
     }
 </code></pre>
-<p>the Maven Publish plugin creates publishing tasks that you can use to publish your artifact to the repositories that you specify.</p>
+<p>The Maven Publish plugin creates publishing tasks that you can use to publish your artifact to the repositories that you specify.</p>
 <pre><code>./gradlew clean build publish
 </code></pre>
-<p><em>TIP:</em>  you can publish the library to &#34;maven local repository&#34; - this is repository inside your computer in ~/.m2/repository and you can use it if you add the repository MavenLocal()</p>
+<p><em>TIP:</em>  You can publish the library to &#34;maven local repository&#34; - this is repository inside your computer in ~/.m2/repository, and you can use it if you add the repository MavenLocal()</p>
 <pre><code>./gradlew clean build publishToMavenLocal
 </code></pre>
-<p><strong>Note</strong><br>you can plublish directly to jforg repository and use the Jfrog plugin to publish</p>
+<p><strong>Note</strong><br>You can use the Jfrog plugin to publish directly to jforg repository</p>
 
 
       </google-codelab-step>
     
       <google-codelab-step label="Using proguard" duration="0">
-        <p>progurd is a tool for us use to obsfectd(hide implementation deatils) and minify (reduce code size) of our code</p>
+        <p>Progurd is a tool that allowing code obsfectd (hide code implementation deatils) and minify (reduce code size)</p>
 <pre><code> buildTypes {
         release {
             minifyEnabled true
@@ -244,10 +244,12 @@ afterEvaluate {
         }
     }
 </code></pre>
-<p>we use it to obsfectd(hide implementation deatils) and minify (reduce code size) of our code<br>it will go over the code and throw code that is not in use<br>it will go over the code and change functions name for obsferction</p>
+<p>We use it to obsfectd (hide implementation deatils) and minify (reduce code size) of our code<br>Use proguard-rules.pro file to tell progurd which class to keep</p>
 <h2 is-upgraded>using progurd inside a library</h2>
-<p>consumerProguardFiles - the rules that are used when the code is consumed as a sub module in the project (app modulde that use library module in the same project)</p>
-<p>proguardFiles - the rules that are used when compile the library - the compiled aar file is upload to the reposity</p>
+<ul>
+<li>‘consumerProguardFiles&#39; - the rules that are used when the code is consumed as a sub module in the project (app modulde that use library module in the same project)</li>
+<li>‘proguardFiles&#39; - the rules that are used when compile the library - the compiled aar file is upload to the reposity</li>
+</ul>
 
 
       </google-codelab-step>

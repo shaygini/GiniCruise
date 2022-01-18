@@ -28,15 +28,15 @@
                   feedback-link="">
     
       <google-codelab-step label="General" duration="0">
-        <p>In this codelab you we will how to use git</p>
+        <p>In this codelab you we learn will how to use git</p>
 
 
       </google-codelab-step>
     
       <google-codelab-step label="What is git" duration="0">
         <p>Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.</p>
-<p>You can use git for evertying you do</p>
-<p>you should learn at least those actions:</p>
+<p>You can use git for manage your code</p>
+<p>You should be familiar with at least those git commands and files:</p>
 <p><strong>local</strong></p>
 <ul>
 <li>git init</li>
@@ -51,46 +51,50 @@
 <li>git pull</li>
 <li>git push -u origin main ()</li>
 </ul>
+<p><strong>gitignore</strong></p>
+<ul>
+<li>use git ignore file</li>
+</ul>
 <h2 is-upgraded>Github tools</h2>
 <p>You can use github using several git tools</p>
 <ul>
-<li>From therminal</li>
-<li>SourceTree - Softwere that shows visulay the git commits tree</li>
-<li>Android studio - manage git inside the android stuido IDE</li>
+<li>From terminal</li>
+<li>SourceTree - Software that shows visulay the git commits tree</li>
+<li>Android studio - Manage git inside the android stuido IDE</li>
 </ul>
 <h2 is-upgraded>Git remote host</h2>
-<p>In order to colaborate  with other pepole we host in remote git host</p>
+<p>In order to colaborate  with other pepole we use a common remote repository in remote git host</p>
 <p>We use &#34;GITHUB&#34; to host most of our project</p>
 <p>some project use diffrent git host like gitbucke, or gitlab</p>
-<p><strong>login</strong></p>
+<p><strong>Login to github</strong></p>
 <ul>
-<li>login with https: user name and password</li>
-<li>login with ssh: follow the instraction in github how to login with ssh, it include create private key in your computer, and put the public key in github site</li>
+<li>Login with https: user name and password</li>
+<li>Login with ssh: follow the instraction in github how to login with ssh, it include create private key in your computer, and put the public key in github site</li>
 <li>some github repositories require login with ssh, so you better do one</li>
 </ul>
 <h2 is-upgraded>pull reqest</h2>
 <p>Every code insertion for new feature will be in new source branch and required &#34;pull request&#34; in order to marge it to the target branch</p>
-<p><strong>create pull request</strong></p>
+<p><strong>Create pull request</strong></p>
 <ul>
 <li>When starting to work on new feature create new branch</li>
 <li>Commit code in the new branch</li>
 <li>Push the new branch to the remote origin</li>
 <li>Go to github site and create new pull request from the new branch source to the target branch</li>
 <li>After approve, the code will be marge to the target branch</li>
-<li>Use squash and marge to if you want to squash all the commits to one commit</li>
-<li>Use marge if you want to remember the source branch history</li>
+<li>Use &#34;squash and marge&#34; if you want to squash all the commits to one commit</li>
+<li>Use &#34;marge&#34; if you want to keep the source branch history</li>
 <li>Don&#39;t forget to delete the branch after marge</li>
 </ul>
 <p><strong>What to do when there is conflict</strong></p>
 <ul>
 <li>In your local repository pull the source and target branch so they will be sync with the remote repository</li>
-<li>From the soruce branch marge the target branch, after check everyting is working well commit the marge</li>
+<li>Marge the soruce branch into the target branch, and resove the conflicts, after check everyting is working well commit the marge</li>
 <li>Push the commit to the remote</li>
 </ul>
-<p><strong>need to remember</strong></p>
+<p><strong>Key points</strong></p>
 <ul>
-<li>Try to do as many pull request as you can, don&#39;t do one big pull request with thousand lines of codes</li>
-<li>Put description of what you did in the pull request descripinn box, and also jira ticket link if needed</li>
+<li>Try to do as many pull request as you can, don&#39;t do one big pull request with handreds lines of codes</li>
+<li>Put description of what you did in the pull request description box, also add jira ticket link if needed</li>
 </ul>
 
 

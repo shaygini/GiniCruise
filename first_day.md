@@ -20,16 +20,16 @@ Make sure your work statation is approitate
 - Mail - google gmail
 - Gira - for manage tasks ( per project )
 - Github - for manage code, create new gini user for your use
-- Zeppling - for getting UI resources ( pre project )
+- Zeppling / Figma - for getting UI resources ( per project )
 
 
 <!-- ------------------------ -->
 ## When you get task
 
 ### Check What are the demands
-- Find the man that will give you messions
+- Find the man that will give you missions
 - If you don't know what to do ask, if no one give you answer ask again, and than ask yourself and find instresting things to do
-- continue with this toturial series
+- Continue with this toturial series
 
 <!-- ------------------------ -->
 ## Return to main
