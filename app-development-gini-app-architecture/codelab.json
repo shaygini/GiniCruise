@@ -1,0 +1,18 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2022-01-22T14:01:53Z",
+  "id": "app-development-gini-app-architecture",
+  "duration": 0,
+  "title": "Introduction",
+  "authors": "Shay markovich",
+  "summary": "app-architecture",
+  "source": "android_app_architecture.md",
+  "theme": "",
+  "status": null,
+  "category": null,
+  "tags": [],
+  "url": "app-development-gini-app-architecture"
+}

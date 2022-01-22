@@ -1,0 +1,178 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>App project</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="app-development-gini-create-app-spacex"
+                  title="App project"
+                  environment="web"
+                  feedback-link="">
+    
+      <google-codelab-step label="General" duration="0">
+        <p>In this codelab you we will create simple spacex launch info app</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="App coding instractions" duration="0">
+        <h2 is-upgraded>Code</h2>
+<ol type="1">
+<li>Create a new repository</li>
+<li>Every feature in the app will need a new pull request and review</li>
+</ol>
+<h2 is-upgraded>Spec</h2>
+<ol type="1">
+<li>The spec of the App is in the next part</li>
+<li>Before coding please read the spec and verify you understeds all the requements and app behaviour, you don&#39;t want to do the same work twice</li>
+<li>Write the code in such a why that it will be easy to add new features.</li>
+</ol>
+<h2 is-upgraded>Documantation</h2>
+<p><strong>Before</strong> and <strong>During</strong> writing the code, create a documantaion helping you and other to understend the code<br>You can use <a href="https://app.diagrams.net/" target="_blank">drao.io</a> to create umls diagrams</p>
+<ol type="1">
+<li>Create a high level blocks diagram of your app incluing classes from all layers</li>
+<li>Create ui app diagram flow (navigation flow between screens)</li>
+<li>Create data uml describing all the database ententies and the relationship between ententies</li>
+</ol>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="App" duration="0">
+        <p>In this section you will build app with all the thing you learn so far</p>
+<h2 is-upgraded>Porpuse</h2>
+<p>The app allow us to see spacex lanches details</p>
+<p>The app contains 4 screens: launchs screen, launch details screen, ships screen, ships details screen.</p>
+<p>The app contains drawer to let us choose between lanunches screen and ships screens</p>
+<p class="image-container"><img alt="image" src="img/e91bbed3ccf073ce.png"></p>
+<h2 is-upgraded>Screens:</h2>
+<ol type="1">
+<li>launches list</li>
+<li>launch details</li>
+<li>ships list</li>
+<li>ships detail</li>
+</ol>
+<h3 is-upgraded>1. Lanches list:</h3>
+<p>title = launch list<br>filter by (search line):</p>
+<ul>
+<li>title</li>
+</ul>
+<p>sorting by:</p>
+<ul>
+<li>date</li>
+<li>title<br>(default sorting by date from new to old)</li>
+</ul>
+<p>cell:</p>
+<ul>
+<li>badge</li>
+<li>title</li>
+<li>date</li>
+</ul>
+<p>behaviour:</p>
+<ul>
+<li>when pressing a launch cell - go to the launch detail screen</li>
+<li>refresh to reload</li>
+</ul>
+<h3 is-upgraded>2. Launch details:</h3>
+<p>title = name of the lanch</p>
+<pre><code>- title
+- badge 
+- date
+- ship list
+- farring list
+</code></pre>
+<p>behaviour:</p>
+<ul>
+<li>when pressing a ship inside the ship list - go to the ship detail screen</li>
+</ul>
+<h3 is-upgraded>3. Ship list:</h3>
+<p>title = ship list<br>filter by (search line):</p>
+<ul>
+<li>title</li>
+</ul>
+<p>sorting by:</p>
+<ul>
+<li>title</li>
+</ul>
+<p>cell:</p>
+<ul>
+<li>pic</li>
+<li>title</li>
+</ul>
+<p>behaviour:</p>
+<ul>
+<li>when pressing a ship cell - go to the ship detail screen</li>
+<li>refresh to reload</li>
+</ul>
+<h3 is-upgraded>4. Ship detail:</h3>
+<p>title = name of the ship</p>
+<ul>
+<li>pic</li>
+<li>title</li>
+<li>more info</li>
+<li>list of all the lanches</li>
+</ul>
+<p>behaviour:</p>
+<ul>
+<li>when pressing a launch inside the launch list - go to the launch detail screen</li>
+</ul>
+<h3 is-upgraded>drawer menu with</h3>
+<ol type="1">
+<li>latest lanches</li>
+<li>ships</li>
+</ol>
+<h2 is-upgraded>API</h2>
+<p>Use https://github.com/r-spacex/SpaceX-API<br>Documantation is in repository main readme file</p>
+<h2 is-upgraded>Add work manager:</h2>
+<p>every day check for changes in lanches,<br>If changed - notification the user<br>when press the notification - the lanch details will be opened,<br>when press back the launch list will oppened</p>
+<h2 is-upgraded>Tests</h2>
+<p><a href="https://developer.android.com/codelabs/advanced-android-kotlin-training-testing-basics#0" target="_blank">tarining testing</a></p>
+<h2 is-upgraded>Stack:</h2>
+<ul>
+<li>navigation components - navigation between fragment</li>
+<li>newtwork calls retrofit - calls to the api</li>
+<li>room database - save data in room database for online and offline use</li>
+<li>Usecases - insde the domain layer</li>
+<li>view model</li>
+<li>fragments</li>
+<li>single activity</li>
+<li>live data - pass data to the ui - from the view model to the fragment</li>
+<li>flow - pass data betweens layers</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Return to main" duration="0">
+        <p><a href="../" target="_blank">return to main</a></p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+
+</body>
+</html>
